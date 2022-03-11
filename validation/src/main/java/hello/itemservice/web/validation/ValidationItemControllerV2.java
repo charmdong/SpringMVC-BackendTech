@@ -170,6 +170,7 @@ public class ValidationItemControllerV2 {
         Map<String, String> errors = new HashMap<>();
 
         // 검증 로직
+        //ValidationUtils.rejectIfEmptyOrWhitespace(bindingResult, "itemName", "required");
         if (!StringUtils.hasText(item.getItemName())) {
             bindingResult.rejectValue("itemName", "required");
         }
